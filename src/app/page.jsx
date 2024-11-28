@@ -7,7 +7,7 @@ export default function Home() {
       <main>
 
         <div>
-       <h1 className="text-White">Hello World</h1>
+       <h1 className="text-Black">Forside</h1>
         </div>
       </main>
       <footer>
