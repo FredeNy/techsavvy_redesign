@@ -46,13 +46,13 @@ console.log(articles);
   }
 
   return (
-    <section className="bg-Darkblue text-White">
-  <h1 className="text-xl">Mest læste</h1>
+    <section className="bg-Navyblue text-White p-8">
+  <h1 className="text-2xl font-bold">Mest læste</h1>
 
-  <div className="bg-Navyblue text-Black grid grid-cols-3 gap-6">
+  <div className="text-Black grid grid-cols-3 gap-6">
     {articles.map((article) => (
       <div className="bg-White" key={article.id}>
-         <Image
+          <Image
               alt={article.Heading}
               src={
                 article.Image.startsWith("http")

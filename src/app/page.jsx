@@ -4,10 +4,9 @@ import NewsArticle from "@/app/components/ArticleCard";
 export default function Home() {
   return (
     <div>
-      <main>
+      <main className="bg-EggWhite">
 
-        <div>
-       <h1 className="text-Black">Forside</h1>
+        <div className="md:px-16 py-4">
        <NewsArticle />
         </div>
       </main>
