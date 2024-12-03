@@ -47,25 +47,30 @@ console.log(articles);
 
   return (
     <section className="bg-Darkblue text-White">
-      <h1 className="text-xl">Mest læste</h1>
+  <h1 className="text-xl">Mest læste</h1>
 
-      <div className="bg-White text-Black">
-        {articles.map((article) => (
-          <div key={article.id}>
-           <Image
-              alt={article.Imagetext}
-              src={article.Image.startsWith("http") ? article.Image : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image}`}
+  <div className="bg-Navyblue text-Black grid grid-cols-3 gap-6">
+    {articles.map((article) => (
+      <div className="bg-White" key={article.id}>
+         <Image
+              alt={article.Heading}
+              src={
+                article.Image.startsWith("http")
+                  ? article.Image
+                  : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image}`
+              }
               width={500}
               height={300}
               objectFit="cover"
               className="rounded-xl"
             />
-
-            <h2 className="bg-Red text-White">{article.Category}</h2>
-            <p className="text-xl font-semibold">{article.Heading}</p>
-          </div>
-        ))}
+        <h2 className="bg-Red text-White px-2 py-1 inline-block">
+          {article.Category}
+        </h2>
+        <p className="text-xl font-semibold">{article.Heading}</p>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 }
