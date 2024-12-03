@@ -1,5 +1,5 @@
 // Forside / Landingpage
-import Image from "next/image";
+import NewsArticle from "@/app/components/ArticleCard";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
 
         <div>
        <h1 className="text-Black">Forside</h1>
+       <NewsArticle />
         </div>
       </main>
       <footer>

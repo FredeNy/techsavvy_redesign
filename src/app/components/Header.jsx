@@ -4,15 +4,48 @@ export default async function Header() {
 
   return (
     <>
+     <nav className="sticky bg-Darkblue text-White px-2 py-4 2xl:py-2 items-center md:px-10 flex justify-end">
+  <ul className="flex gap-4 md:gap-16">
+  <li>
+  <Link
+    href="/"
+    prefetch={false}
+    className="font-bold text-sm md:text-xl 2xl:text-xl text-White hover:underline active:underline"
+  >
+    Academy
+  </Link>
+</li>
+
+    <li>
+      <Link
+        href="/"
+        prefetch={false}
+        className="font-bold text-sm md:text-xl 2xl:text-xl text-White hover:underline active:underline"
+      >
+        Agency
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="/"
+        prefetch={false}
+        className="font-bold text-sm md:text-xl 2xl:text-xl text-White hover:underline active:underline"
+      >
+        Community+
+      </Link>
+    </li>
+  </ul>
+</nav>
+
+
       <nav className="sticky flex justify-between bg-Navyblue text-White px-2 py-4 2xl:py-2 items-center md:px-10">
         <ul className="flex gap-2">
           <li>
             <Link
-              className={`font-bold text-sm sm:text-2xl 2xl:text-xl hover:text-Red`}
               href="/"
               prefetch={false}
             >
-              TechSavvy
+               <img src="/logo.svg" alt="Techsavvys logo" height={115} width={300}/>
             </Link>
           </li>
         </ul>
@@ -22,14 +55,14 @@ export default async function Header() {
             <Link
               href="/Nyheder"
               prefetch={false}
-            className="font-bold text-sm md:text-mg 2xl:text-xl hover:text-Red"
+            className="font-bold text-sm md:text-xl 2xl:text-xl hover:underline active:underline"
             >
               Nyheder
             </Link>
           </li>
           <li>
             <Link
-              className="font-bold text-sm md:text-mg 2xl:text-xl hover:text-Red"
+              className="font-bold text-sm md:text-xl 2xl:text-xl hover:underline active:underline"
               href="/Lokalt"
               prefetch={false}
             >
@@ -38,7 +71,7 @@ export default async function Header() {
           </li>
           <li>
             <Link
-              className="font-bold text-sm md:text-mg 2xl:text-xl hover:text-Red"
+              className="font-bold text-sm md:text-xl 2xl:text-xl hover:underline active:underline"
               href="/MånedensTema"
               prefetch={false}
             >
@@ -47,22 +80,13 @@ export default async function Header() {
           </li>
           <li>
             <Link
-              className="font-bold text-sm md:text-mg 2xl:text-xl hover:text-Red"
+              className="font-bold text-sm md:text-xl 2xl:text-xl hover:underline active:underline"
               href="/Magasiner"
               prefetch={false}
             >
               Magasiner
             </Link>
             </li>
-            <li>
-            <Link
-              className="font-bold text-sm md:text-mg 2xl:text-xl hover:text-Red"
-              href="/Trends"
-              prefetch={false}
-            >
-              Trends
-            </Link>
-          </li>
         </ul>
       </nav>
     </>
