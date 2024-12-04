@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NewsArticles() {
   const [articles, setArticles] = useState(null);
@@ -50,31 +51,36 @@ console.log(articles);
 
   return (
     <section className="bg-Navyblue text-White p-8">
-  <h1 className="text-2xl font-bold">Mest læste</h1>
-
-  <div className="text-Black md:grid grid-cols-3 gap-6">
-    {articles.map((article) => (
-      <div className="bg-White" key={article.id}>
-      <Image
-        alt={article.Heading}
-        src={
-          article.Image.startsWith("http")
-            ? article.Image.trim()
-            : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image.trim()}`
-        }
-        width={500}
-        height={300}
-        className=""
-      />
-      <div className="mx-6">
-        <h2 className="bg-Red text-White px-2 py-1 inline-block">
-          {article.Category}
-        </h2>
-        <p className="text-xl font-semibold">{article.Heading}</p>
-        </div>
+      <h1 className="text-2xl font-bold">Mest læste</h1>
+  
+      <div className="text-Black md:grid grid-cols-3 gap-6">
+        {articles.map((article) => (
+          <div className="bg-White" key={article.id}>
+            <Link href={`/${article.slug}`} prefetch={false}>
+              <div>
+                <Image
+                  alt={article.Heading}
+                  src={
+                    article.Image.startsWith("http")
+                      ? article.Image.trim()
+                      : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image.trim()}`
+                  }
+                  width={500}
+                  height={300}
+                  className=""
+                />
+                <div className="mx-6">
+                  <h2 className="bg-Red text-White px-2 py-1 inline-block">
+                    {article.Category}
+                  </h2>
+                  <p className="text-xl font-semibold">{article.Heading}</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </section>
   );
+  
 }
