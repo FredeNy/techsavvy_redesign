@@ -30,7 +30,7 @@ export default function NewsArticles() {
         const data = await res.json();
 
         // Filtrer artikler med Popularity === 100 og vælg de første 3
-        const filteredArticles = data.filter((article) => article.Popularity === 100).slice(0, 3);
+        const filteredArticles = data.filter((article) => article.Location === "København").slice(0, 9);
         setArticles(filteredArticles);
       } catch (err) {
         setError(err.message);
@@ -50,7 +50,7 @@ console.log(articles);
 
   return (
     <section className="bg-Navyblue text-White p-8">
-  <h1 className="text-2xl font-bold">Mest læste</h1>
+  <h1 className="text-2xl font-bold">København</h1>
 
   <div className="text-Black md:grid grid-cols-3 gap-6">
     {articles.map((article) => (
