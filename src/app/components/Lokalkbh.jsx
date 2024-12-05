@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NewsArticles() {
   const [articles, setArticles] = useState(null);
@@ -55,6 +56,7 @@ console.log(articles);
   <div className="text-Black md:grid grid-cols-3 gap-6">
     {articles.map((article) => (
       <div className="bg-White" key={article.id}>
+        <Link href={`/Lokalt/København/${article.slug}`} prefetch={false}>
       <Image
         alt={article.Heading}
         src={
@@ -66,6 +68,7 @@ console.log(articles);
         height={300}
         className=""
       />
+      </Link>
       <div className="mx-6">
         <h2 className="bg-Red text-White px-2 py-1 inline-block">
           {article.Category}

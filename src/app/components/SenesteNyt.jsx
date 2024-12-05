@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function LatestNewsArticles() {
   const [articles, setArticles] = useState(null);
   const [error, setError] = useState(null);
@@ -57,7 +57,9 @@ export default function LatestNewsArticles() {
 
       <div className="text-Black">
         {articles.map((article) => (
+          
           <div className="" key={article.id}>
+            <Link href={`/${article.slug}`} prefetch={false}>
             <Image
               alt={article.Heading}
               src={
@@ -68,7 +70,9 @@ export default function LatestNewsArticles() {
               width={1000}
               height={800}
               className=" w-full"
+              
             />
+            </Link>
             <h2 className="bg-Red text-White mx-6 px-4 py-1 inline-block">
               {article.Category}
             </h2>

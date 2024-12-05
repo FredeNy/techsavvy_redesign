@@ -56,7 +56,7 @@ console.log(articles);
       <div className="text-Black md:grid grid-cols-3 gap-6">
         {articles.map((article) => (
           <div className="bg-White" key={article.id}>
-            <Link href={`/nyhed/${article.slug}`} prefetch={false}>
+            <Link href={`/${article.slug}`} prefetch={false}>
               <div>
                 <Image
                   alt={article.Heading}
