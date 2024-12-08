@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-
+import ArticleCard from "@/app/components/ArticleCard"
 const supabaseUrl = "https://kxhcvsawrtnioroqlqtz.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4aGN2c2F3cnRuaW9yb3FscXR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI3ODg0NjQsImV4cCI6MjA0ODM2NDQ2NH0.vSHBY-_CVLINk2YnjqchDZ0JlaOMgAzYFB0n63sp61U";
 
@@ -80,6 +80,9 @@ export default async function Page({ params }) {
               </div>
               <p className="text-xl font-medium py-4">{article.Bodytext}</p>
             </div>
+            <div>
+              <ArticleCard/>
+              </div>
           </div>
         </div>
       </section>
