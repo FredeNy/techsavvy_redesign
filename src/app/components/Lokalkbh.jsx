@@ -7,9 +7,10 @@ import Link from "next/link";
 export default function NewsArticles() {
   const [articles, setArticles] = useState(null);
   const [error, setError] = useState(null);
-  const [categories, setCategories] = useState([]); // Tilgængelige kategorier
-  const [selectedCategory, setSelectedCategory] = useState("All"); // Valgt kategori
-  const [isOpen, setIsOpen] = useState(false); // Dropdown state
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(9); // Start med 9 artikler
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -32,10 +33,11 @@ export default function NewsArticles() {
 
         const data = await res.json();
 
-        // Filtrer artikler baseret på Location og hent unikke kategorier
-        const filteredArticles = data.filter(
-          (article) => article.Location === "København"
-        );
+        // Filtrer og sorter artikler
+        const filteredArticles = data
+          .filter((article) => article.Location === "København")
+          .sort((a, b) => new Date(b.Date) - new Date(a.Date));
+
         const uniqueCategories = [
           "All",
           ...new Set(filteredArticles.map((article) => article.Category)),
@@ -51,11 +53,18 @@ export default function NewsArticles() {
     fetchArticles();
   }, []);
 
-  // Filtrér artikler baseret på valgt kategori
-  const filteredArticles = articles?.filter(
-    (article) =>
-      selectedCategory === "All" || article.Category === selectedCategory
-  );
+  const loadMoreArticles = () => {
+    setCurrentIndex((prevIndex) => prevIndex + 9);
+  };
+
+  const filteredArticles = articles
+    ?.filter(
+      (article) =>
+        selectedCategory === "All" || article.Category === selectedCategory
+    )
+    .slice(0, currentIndex);
+
+  const allArticlesLoaded = articles && currentIndex >= articles.length;
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -71,14 +80,13 @@ export default function NewsArticles() {
         <h1 className="text-2xl font-bold">Nyheder - København</h1>
       </div>
 
-      {/* Brugerdefineret dropdown */}
       <div className="flex justify-end mb-4">
         <div>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-4 px-10 bg-Red text-White text-xl font-bold border border-White"
-          >Filter
-            
+          >
+            Filter
           </button>
           {isOpen && (
             <ul className="absolute right-0 mt-2 bg-Red text-White rounded shadow-lg w-48">
@@ -99,7 +107,6 @@ export default function NewsArticles() {
         </div>
       </div>
 
-      {/* Artikler */}
       <div className="text-Black md:grid grid-cols-3 gap-6">
         {filteredArticles.map((article) => (
           <div className="bg-White" key={article.id}>
@@ -124,6 +131,20 @@ export default function NewsArticles() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8 text-center">
+        <button
+          onClick={loadMoreArticles}
+          disabled={allArticlesLoaded}
+          className={`p-4 px-10 text-xl font-bold border ${
+            allArticlesLoaded
+              ? "bg-Grey text-gray-700 border-gray-500"
+              : "bg-Red text-White border-White"
+          }`}
+        >
+          {allArticlesLoaded ? "Alle artikler er indlæst" : "Indlæs flere"}
+        </button>
       </div>
     </section>
   );

@@ -73,7 +73,11 @@ console.log(articles);
                   <h2 className="bg-Red text-White px-2 py-1 inline-block">
                     {article.Category}
                   </h2>
-                  <p className="text-xl font-semibold">{article.Heading}</p>
+                  <p className="text-xl font-semibold">{article.Heading.split(":").map((part, index) => (
+    <span key={index} className={index > 0 ? "block" : ""}>
+      {part}{index === 0 && ":"}
+    </span>
+  ))}</p>
                 </div>
               </div>
             </Link>

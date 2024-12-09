@@ -55,8 +55,12 @@ export default async function Page({ params }) {
         <div className="text-Black ">
           <div className="bg-White" key={article.id}>
             <div className='p-6'>
-          <p className="text-2xl font-semibold">{article.Heading}</p>
-          <p className="text-xl font-medium">{article.Subheading}</p>
+          <p className="text-2xl font-semibold">{article.Heading.split(":").map((part, index) => (
+    <span key={index} className={index > 0 ? "block" : ""}>
+      {part}{index === 0 && ":"}
+    </span>
+  ))}</p>
+          <p className="text-md font-medium">{article.Subheading}</p>
           </div>
             <Image
               alt={article.Heading}
@@ -76,7 +80,7 @@ export default async function Page({ params }) {
              
               <p className="text-xl font-normal py-6">{article.Imagetext}</p>
               <div className='border-t border-b border-EggWhite py-6'>
-              <p className="text-xl font-medium">Af {article.Author}<span className='text-Hotpink'> {article.Date} </span></p>
+              <p className="text-xl font-medium">Af {article.Author}<span className=''> {article.Date} </span></p>
               </div>
               <p className="text-xl font-medium py-4">{article.Bodytext}</p>
             </div>
