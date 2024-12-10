@@ -21,7 +21,7 @@ export default function Home() {
        <SoMeContent />
        <Debat/>
        <Annonce/>
-       <div className="grid grid-cols-2">
+       <div className="md:grid grid-cols-2">
        <JobAnnonce/>
        <NewsLetter/>
        </div>
