@@ -61,7 +61,7 @@ export default function Header() {
       </nav>
 
       {/* Primær navigation */}
-      <nav className="sticky hidden md:flex justify-between bg-Navyblue text-White px-4 py-4">
+      <nav className="sticky hidden md:flex justify-between bg-Navyblue text-White px-4 py-4 border-y border-White">
       <Link href="/">
           <img src="/logo.svg" alt="Techsavvys logo" className="h-20" />
         </Link>

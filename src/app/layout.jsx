@@ -1,24 +1,28 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Inter } from "next/font/google";
+import { Inter, Open_Sans, PT_Sans } from "next/font/google";
 import "./globals.css";
 
+// Importér skrifttyper med Next.js' `next/font/google`
 const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
+const ptSans = PT_Sans({ subsets: ["latin"], weight: "700" });
+
 
 export const metadata = {
   title: "TechSavvy",
-  description: "Danmarks størtste startup medie",
+  description: "Danmarks største startup medie",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter} antialiased`}
+        className={`${inter.className} ${openSans.className} ${ptSans.className} antialiased`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

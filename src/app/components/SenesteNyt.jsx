@@ -53,7 +53,7 @@ export default function LatestNewsArticles() {
   }
 
   return (
-    <section className="bg-White text-Black p-8">
+    <section className="bg-White text-Black">
 
       <div className="text-Black">
         {articles.map((article) => (

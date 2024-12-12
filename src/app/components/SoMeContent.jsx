@@ -4,8 +4,18 @@ import Image from "next/image";
 export default function SoMeContent() {
 
   return (
-    <section className="bg-White">
+    <section className="bg-White p-8">
+    <div className="flex pb-8">
     <h2 className="text-2xl font-bold">Følg med</h2>
+    <Image 
+        src="/playicon.svg" 
+        alt="play icon i følg med sektionen"
+        width={29} 
+        height={29}
+        priority 
+        className="ml-2"
+              />
+              </div>
 <div className="grid grid-cols-3">
     <div className="">
       <Image 
@@ -13,6 +23,7 @@ export default function SoMeContent() {
         alt="Techsavvys logo" 
         width={250} 
         height={400}
+        className=""
         priority 
       />
 <h3 className="w-2/3">Finalisterne til Nordic PropTech Awards 2025 offentliggjort</h3>
