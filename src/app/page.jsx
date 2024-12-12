@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <main className="bg-EggWhite">
 
-        <div className="md:px-16 py-4">
+        <div className="md:px-16 pb-4">
       <SenesteNytArticle />
        <NewsArticle />
        <Annonce/>

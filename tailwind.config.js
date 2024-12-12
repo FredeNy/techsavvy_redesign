@@ -14,6 +14,7 @@ module.exports = {
       'Grey': '#CECFD3',
       'Navyblue': '#0A1C38',
       'Darkblue': '#071324',
+      'Hoverbtn': '#AC1D22',
     },
 
     extend: {
