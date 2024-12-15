@@ -13,7 +13,10 @@ export default function Lokalt() {
         <div className="md:px-16 pb-4">
           <SenesteNytkbh/>
        <NewsArticleslokalt/>
-       <Ad/>
+       <Ad 
+            imageSrc="/techsavvy_ad_white.webp" 
+            altText="Annonce" 
+          />
        <NewsLetter/>
         </div>
       </main>
