@@ -62,6 +62,7 @@ export default async function Page({ params }) {
   ))}</p>
           <p className="text-sm md:text-md md:w-2/3">{article.Subheading}</p>
           </div>
+          
             <Image
               alt={article.Heading}
               src={
@@ -74,7 +75,7 @@ export default async function Page({ params }) {
               className="w-full"
             />
             <div className="mx-6">
-              <h2 className="bg-Red font-inter text-White absolute sm:bottom-10 px-2 py-1">
+              <h2 className="bg-Red font-inter text-White absolute -mt-4 px-2 py-1 whitespace-nowrap overflow-hidden text-ellipsis">
                 {article.Category}
               </h2>
              

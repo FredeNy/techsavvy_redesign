@@ -88,11 +88,11 @@ export default function LatestNewsArticles() {
                   className="w-full"
                 />
   
-                <h2 className="bg-Red text-White mx-6 px-4 py-1 inline-block">
+                <h2 className="bg-Red font-inter text-White absolute -mt-4 px-4 py-1 mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
                   {article.Category}
                 </h2>
                 </div>
-                <div className="mx-6">
+                <div className="mx-6 pt-10">
                   <p className="md:text-2xl font-openSans">
 
                     {article.Heading.split(":").map((part, index) => (
