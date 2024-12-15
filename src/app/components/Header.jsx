@@ -27,7 +27,7 @@ export default function Header() {
         <Link href="/">
           <img src="/logo.svg" alt="Techsavvys logo" className=" h-12 md:hidden" />
         </Link>
-        <ul className="hidden md:flex gap-8 items-center">
+        <ul className="hidden md:flex gap-8 items-center mx-4">
           <li>
             <Link href="https://techsavvy.academy/" className="text-sm md:text-md hover:underline">
               Academy
@@ -65,9 +65,9 @@ export default function Header() {
       {/* Primær navigation */}
       <nav className="font-openSans sticky top-0 z-50 hidden md:flex justify-between bg-Navyblue text-White p-2 border-y border-White">
       <Link href="/">
-          <img src="/logo.svg" alt="Techsavvys logo" className="h-16" />
+          <img src="/logo.svg" alt="Techsavvys logo" className="mx-4 h-16" />
         </Link>
-        <ul className="flex gap-8 items-center">
+        <ul className="flex gap-8 items-center mx-4">
           
           <li>
             <Link href="/" className="text-sm md:text-lg hover:underline">

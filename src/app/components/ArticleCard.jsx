@@ -50,10 +50,10 @@ console.log(articles);
   }
 
   return (
-    <section className="bg-Navyblue text-White p-8">
-      <h1 className="text-2xl font-bold">Mest læste</h1>
+    <section className="bg-Navyblue text-White">
+      <h2 className="font-openSans text-xl md:text-2xl font-bold pt-6 pl-6">MEST LÆSTE</h2>
   
-      <div className="text-Black sm:grid sm:grid-cols-3 gap-2 md:gap-4">
+      <div className=" sm:w-full text-Black  md:grid md:grid-cols-3 md:gap-10 md:pt-6 md:px-6 pt-6 md:p-12">
         {articles.map((article) => (
           <div className="bg-White relative" key={article.id}>
             <Link href={`/${article.slug}`} prefetch={false}>
@@ -68,7 +68,7 @@ console.log(articles);
                     }
                     width={500}
                     height={300}
-                    className="w-1/3 sm:w-full"
+                    className="w-auto"
                   />
                   
                   <div className="font-inter flex col absolute sm:-bottom-4 sm:left-4 bg-Red text-White px-4 py-1">
@@ -76,7 +76,7 @@ console.log(articles);
                   </div>
                 </div>
                 <div className="mx-6 mt-4">
-                  <p className="text-xl font-semibold">
+                  <p className="text-xl font-openSans">
                     {article.Heading.split(":").map((part, index) => (
                       <span key={index} className={index > 0 ? "block" : ""}>
                         {part}

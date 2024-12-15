@@ -50,34 +50,46 @@ console.log(articles);
   }
 
   return (
-    <section className="bg-Navyblue text-White p-8">
-  <h1 className="text-2xl font-bold">Debat</h1>
-
-  <div className="text-Black md:grid grid-cols-3 gap-6">
-    {articles.map((article) => (
-      <div className="bg-White" key={article.id}>
-        <Link href={`/${article.slug}`} prefetch={false}>
-      <Image
-        alt={article.Heading}
-        src={
-          article.Image.startsWith("http")
-            ? article.Image.trim()
-            : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image.trim()}`
-        }
-        width={500}
-        height={300}
-        className=""
-      />
-      </Link>
-      <div className="mx-6">
-        <h2 className="bg-Red font-inter text-White px-2 py-1 inline-block">
-          {article.Category}
-        </h2>
-        <p className="text-xl font-semibold">{article.Heading}</p>
-        </div>
+    <section className="bg-Navyblue text-White">
+      <h2 className="font-openSans text-xl md:text-2xl font-bold pt-6 pl-6">DEBAT</h2>
+  
+      <div className=" sm:w-full text-Black  md:grid md:grid-cols-3 md:gap-10 md:pt-6 md:px-6 pt-6 md:p-12">
+        {articles.map((article) => (
+          <div className="bg-White relative" key={article.id}>
+            <Link href={`/${article.slug}`} prefetch={false}>
+              <div>
+                <div className="relative">
+                  <Image
+                    alt={article.Heading}
+                    src={
+                      article.Image.startsWith("http")
+                        ? article.Image.trim()
+                        : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image.trim()}`
+                    }
+                    width={500}
+                    height={300}
+                    className="w-auto"
+                  />
+                  
+                  <div className="font-inter flex col absolute sm:-bottom-4 sm:left-4 bg-Red text-White px-4 py-1">
+                    {article.Category}
+                  </div>
+                </div>
+                <div className="mx-6 mt-4">
+                  <p className="text-xl font-openSans">
+                    {article.Heading.split(":").map((part, index) => (
+                      <span key={index} className={index > 0 ? "block" : ""}>
+                        {part}
+                        {index === 0 && ":"}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </section>
   );
 }

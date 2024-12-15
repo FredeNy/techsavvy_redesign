@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function SoMeContent() {
 
   return (
-    <section className="bg-White p-8">
+    <section className="bg-White p-8 font-openSans">
     <div className="flex pb-8">
-    <h2 className="text-2xl font-bold">Følg med</h2>
+    <h2 className="md:text-2xl font-bold">FØLG MED</h2>
     <Image 
         src="/playicon.svg" 
         alt="play icon i følg med sektionen"

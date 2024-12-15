@@ -5,7 +5,7 @@ import "./globals.css";
 
 // Importér skrifttyper med Next.js' `next/font/google`
 const inter = Inter({ subsets: ["latin"], weight: "400"});
-const openSans = Open_Sans({ subsets: ["latin"], weight: "700"});
+const openSans = Open_Sans({ subsets: ["latin"], weight: "800"});
 const ptSans = PT_Sans({ subsets: ["latin"], weight: "400"});
 
 

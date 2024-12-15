@@ -75,16 +75,17 @@ export default function NewsArticles() {
   }
 
   return (
-    <section className="bg-Navyblue text-White p-8">
+    <section className="bg-Navyblue text-White pb-12">
+      <div className="flex justify-between px-6 pt-6">
       <div>
-        <h1 className="text-2xl font-bold">Nyheder - København</h1>
+        <h1 className="font-openSans text-xl md:text-2xl">NYHEDER - KØBENHAVN</h1>
       </div>
 
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end">
         <div>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-4 px-10 bg-Red text-White text-xl font-bold border border-White"
+            className="font-openSans p-2 px-10 bg-Red text-White text-xl font-bold border border-White"
           >
             Filter
           </button>
@@ -104,10 +105,11 @@ export default function NewsArticles() {
               ))}
             </ul>
           )}
+          </div>
         </div>
       </div>
 
-      <div className="text-Black md:grid grid-cols-3 gap-6">
+      <div className="text-Black md:grid grid-cols-3 gap-6 p-6">
         {filteredArticles.map((article) => (
           <div className="bg-White" key={article.id}>
             <Link href={`/${article.slug}`} prefetch={false}>
@@ -124,10 +126,10 @@ export default function NewsArticles() {
               />
             </Link>
             <div className="mx-6">
-              <h2 className="bg-Red text-White px-2 py-1 inline-block">
+              <h2 className="font-inter bg-Red text-White px-2 py-1 inline-block">
                 {article.Category}
               </h2>
-              <p className="text-xl font-semibold">{article.Heading}</p>
+              <p className="text-xl font-semibold font-openSans">{article.Heading}</p>
             </div>
           </div>
         ))}
@@ -137,13 +139,13 @@ export default function NewsArticles() {
         <button
           onClick={loadMoreArticles}
           disabled={allArticlesLoaded}
-          className={`p-4 px-10 text-xl font-bold border ${
+          className={`font-openSans p-4 px-10 text-xl font-bold border ${
             allArticlesLoaded
               ? "bg-Grey text-gray-700 border-gray-500"
               : "bg-Red text-White border-White"
           }`}
         >
-          {allArticlesLoaded ? "Alle artikler er indlæst" : "Indlæs flere"}
+          {allArticlesLoaded ? "INDLÆS FLERE" : "INDLÆS FLERE"}
         </button>
       </div>
     </section>

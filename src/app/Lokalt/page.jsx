@@ -1,7 +1,7 @@
 // Lokalt
 import Image from "next/image";
 import NewsArticleslokalt from "../components/Lokalkbh";
-import Annonce from "../components/Annonce"
+import Ad from "../components/Ad"
 import NewsLetter from "../components/NewsLetter";
 import SenesteNytkbh from "@/app/components/SenesteNytkbh";
 
@@ -13,7 +13,7 @@ export default function Lokalt() {
         <div className="md:px-16 pb-4">
           <SenesteNytkbh/>
        <NewsArticleslokalt/>
-       <Annonce/>
+       <Ad/>
        <NewsLetter/>
         </div>
       </main>

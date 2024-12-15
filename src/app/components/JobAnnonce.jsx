@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function JobAnnonce() {
 
   return (
-    <section className="bg-White text-Black px-8">
-  <h1 className="text-2xl font-bold py-4">JOBANNONCER</h1>
+    <section className="bg-White text-Black">
+  <h1 className="font-openSans md:text-2xl font-bold py-8 px-6">JOBANNONCER</h1>
 
   <div className="text-Black border-t border-b border-EggWhite p-4">
   
@@ -15,7 +15,7 @@ export default function JobAnnonce() {
       width={75}
       height={75}
     />
-    <h2 className="text-lg font-bold md:w-64">Netværkschef - med næse for salg, udvikling og relationer</h2>
+    <h2 className="font-openSans text-lg font-bold md:w-72">Netværkschef - med næse for salg, udvikling og relationer</h2>
   </div>
 
   <div className="flex flex-wrap mt-2 space-x-4">
@@ -35,7 +35,7 @@ export default function JobAnnonce() {
       width={75}
       height={75}
     />
-    <h2 className="text-lg font-bold md:w-64">Medie konsulent til Danmarks største startupmedie</h2>
+    <h2 className="font-openSans text-lg font-bold md:w-72">Medie konsulent til Danmarks største startupmedie</h2>
   </div>
 
   <div className="flex flex-wrap mt-2 space-x-4">
@@ -54,7 +54,7 @@ export default function JobAnnonce() {
       width={75}
       height={75}
     />
-    <h2 className="text-lg font-bold">Grafisk designer</h2>
+    <h2 className="font-openSans text-lg font-bold">Grafisk designer</h2>
   </div>
 
   <div className="flex flex-wrap mt-2 space-x-4">
