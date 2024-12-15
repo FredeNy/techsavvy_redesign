@@ -60,7 +60,7 @@ export default async function Page({ params }) {
       {part}{index === 0 && ":"}
     </span>
   ))}</p>
-          <p className=" text-sm md:text-md md:w-2/3">{article.Subheading}</p>
+          <p className="text-sm md:text-md md:w-2/3">{article.Subheading}</p>
           </div>
             <Image
               alt={article.Heading}

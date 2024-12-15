@@ -17,18 +17,12 @@ module.exports = {
       'Hoverbtn': '#AC1D22',
     },
 
-    extend: {
-
-      fontFamily:{
-        'categoryText':['var(--Inter)', 'sans-serif'],
-        'bodyText':['var(--ptSans)', 'sans-serif'],
-        'openSansText':['var(--openSans)', 'sans-serif'],
-      },
-      fontWeight:{
-        'categoryText': 400,
-        'bodyText': 400,
-        'worksansText': 400,
-      },
+      extend: {
+        fontFamily: {
+          inter: ['Inter', 'sans-serif'],
+          openSans: ['Open Sans', 'sans-serif'],
+          ptSans: ['PT Sans', 'sans-serif'],
+        },
    
     },
   },
