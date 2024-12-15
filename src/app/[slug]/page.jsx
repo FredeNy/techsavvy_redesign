@@ -51,38 +51,44 @@ export default async function Page({ params }) {
     const article = articles[0];
 
     return (
-      <section className="bg-EggWhite text-White md:px-16 py-4">
+      <section className="bg-EggWhite text-White md:px-24 pb-4">
         <div className="text-Black ">
           <div className="bg-White" key={article.id}>
             <div className='p-6'>
-          <p className="text-2xl font-semibold">{article.Heading.split(":").map((part, index) => (
+          <p className="font-openSans text-xl md:text-2xl">{article.Heading.split(":").map((part, index) => (
     <span key={index} className={index > 0 ? "block" : ""}>
       {part}{index === 0 && ":"}
     </span>
   ))}</p>
-          <p className="text-md font-medium">{article.Subheading}</p>
+          <p className=" text-sm md:text-md md:w-2/3">{article.Subheading}</p>
           </div>
             <Image
               alt={article.Heading}
               src={
-                article.Image.startsWith("http")
-                  ? article.Image.trim()
+                article.ImageEdited.startsWith("http")
+                  ? article.ImageEdited.trim()
                   : `${supabaseUrl}/storage/v1/object/public/images/${article.Image.trim()}`
               }
               width={1000}
               height={800}
-              className=" w-full"
+              className="w-full"
             />
             <div className="mx-6">
-              <h2 className="bg-Red text-White px-2 py-1 inline-block">
+              <h2 className="bg-Red font-inter text-White absolute sm:bottom-10 px-2 py-1">
                 {article.Category}
               </h2>
              
-              <p className="text-xl font-normal py-6">{article.Imagetext}</p>
+              <p className="text-sm py-6">{article.Imagetext}</p>
               <div className='border-t border-b border-EggWhite py-6'>
-              <p className="text-xl font-medium">Af {article.Author}<span className=''> {article.Date} </span></p>
+              <p className="text-md">Af <span className='font-extrabold'>{article.Author}</span><span className='ml-6'> {article.Date} </span></p>
               </div>
-              <p className="text-xl font-medium py-4">{article.Bodytext}</p>
+              <p className="text-lg font-normal py-10">
+  {article.Bodytext.split('\n').map((paragraph, index) => (
+    <span key={index} className="block mb-4 leading-relaxed">
+      {paragraph}
+    </span>
+  ))}
+</p>
             </div>
             <div>
               <ArticleCard/>

@@ -70,7 +70,7 @@ console.log(articles);
       />
       </Link>
       <div className="mx-6">
-        <h2 className="bg-Red text-White px-2 py-1 inline-block">
+        <h2 className="bg-Red font-inter text-White px-2 py-1 inline-block">
           {article.Category}
         </h2>
         <p className="text-xl font-semibold">{article.Heading}</p>

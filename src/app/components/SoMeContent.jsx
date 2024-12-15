@@ -16,11 +16,11 @@ export default function SoMeContent() {
         className="ml-2"
               />
               </div>
-<div className="grid grid-cols-3">
+<div className="grid grid-cols-2 md:grid-cols-4">
     <div className="">
       <Image 
-        src="/techsavvy_ad_red.webp" 
-        alt="Techsavvys logo" 
+        src="/SoMe1.png" 
+        alt="Link til SoMe video" 
         width={250} 
         height={400}
         className=""
@@ -30,8 +30,8 @@ export default function SoMeContent() {
     </div>
     <div className="">
       <Image 
-        src="/techsavvy_ad_red.webp" 
-        alt="Techsavvys logo" 
+        src="/SoMe2.png" 
+        alt="Link til SoMe video" 
         width={250} 
         height={400}
         priority 
@@ -40,13 +40,23 @@ export default function SoMeContent() {
     </div>
     <div className="">
       <Image 
-        src="/techsavvy_ad_red.webp" 
-        alt="Techsavvys logo" 
+        src="/SoMe3.png" 
+        alt="Link til SoMe video" 
         width={250} 
         height={400}
         priority 
       />
 <h3 className="w-2/3">Et brag af en åbningsfest med bajere og band</h3>
+    </div>
+    <div className="">
+      <Image 
+        src="/SoMe4.webP" 
+        alt="Link til SoMe video" 
+        width={250} 
+        height={400}
+        priority 
+      />
+<h3 className="w-2/3">Fynsk robotgigant åbner første udenlandske produktionsanlæg</h3>
     </div>
     </div>
   </section>

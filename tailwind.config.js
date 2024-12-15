@@ -18,32 +18,17 @@ module.exports = {
     },
 
     extend: {
-     /* animation: {
-        marquee: 'marquee 35s linear infinite',
-        //marquee2: 'marquee2 25s linear infinite',
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-          //'100%': { transform: 'translateX(-100%)' },
 
-        },
-    
-        //marquee2: {
-         // '0%': { transform: 'translateX(100%)' },
-         // '100%': { transform: 'translateX(0%)' },
-       // },
-      },
-*/
-/*
       fontFamily:{
-        'pText':['var(--outfit)', 'sans-serif'],
+        'categoryText':['var(--Inter)', 'sans-serif'],
+        'bodyText':['var(--ptSans)', 'sans-serif'],
+        'openSansText':['var(--openSans)', 'sans-serif'],
       },
       fontWeight:{
-        'pText': 400,
+        'categoryText': 400,
+        'bodyText': 400,
+        'worksansText': 400,
       },
-*/
    
     },
   },

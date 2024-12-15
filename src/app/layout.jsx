@@ -4,9 +4,9 @@ import { Inter, Open_Sans, PT_Sans } from "next/font/google";
 import "./globals.css";
 
 // Importér skrifttyper med Next.js' `next/font/google`
-const inter = Inter({ subsets: ["latin"] });
-const openSans = Open_Sans({ subsets: ["latin"] });
-const ptSans = PT_Sans({ subsets: ["latin"], weight: "700" });
+const inter = Inter({ subsets: ["latin"], weight: "400"});
+const openSans = Open_Sans({ subsets: ["latin"], weight: "700"});
+const ptSans = PT_Sans({ subsets: ["latin"], weight: "400"});
 
 
 export const metadata = {

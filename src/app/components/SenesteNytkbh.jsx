@@ -75,7 +75,6 @@ export default function LatestNewsArticles() {
           {articles.map((article, index) => (
             <div className="min-w-full" key={article.id}>
               <Link href={`/${article.slug}`} prefetch={false}>
-              <div className="">
                 <Image
                   alt={article.Heading}
                   src={
@@ -87,30 +86,26 @@ export default function LatestNewsArticles() {
                   height={800}
                   className="w-full"
                 />
-  
-                <h2 className="bg-Red text-White mx-6 px-4 py-1 inline-block">
-                  {article.Category}
-                </h2>
-                </div>
-                <div className="mx-6">
-                  <p className="md:text-2xl font-openSans">
-
-                    {article.Heading.split(":").map((part, index) => (
-                      <span key={index} className={index > 0 ? "block" : ""}>
-                        {part}
-                        {index === 0 && ":"}
-                      </span>
-                    ))}
-                  </p>
-                  <p className="text-md font-normal hidden sm:block">
-                    {article.Subheading}
-                  </p>
-                </div>
+              
+              <h2 className="bg-Red text-White mx-6 px-4 py-1 inline-block">
+                {article.Category}
+              </h2>
+              <div className="mx-6">
+                <p className="text-2xl font-semibold">
+                  {article.Heading.split(":").map((part, index) => (
+                    <span key={index} className={index > 0 ? "block" : ""}>
+                      {part}
+                      {index === 0 && ":"}
+                    </span>
+                  ))}
+                </p>
+                <p className="text-md font-normal">{article.Subheading}</p>
+              </div>
               </Link>
             </div>
           ))}
         </div>
-  
+
         {/* Indikatorer */}
         <div className="bg-White flex space-x-2 my-2 justify-center">
           {articles.map((_, index) => (

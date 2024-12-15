@@ -20,24 +20,26 @@ export default function Header() {
 
   return (
     <>
-      <nav className="sticky bg-Darkblue text-White p-4 flex justify-between items-center">
+    <header className='sticky top-0 z-50'>
+    <nav className=" font-openSans font-extrabold bg-Darkblue text-White p-2 flex justify-between items-center">
+
         {/* Sekundær navigation */}
         <Link href="/">
           <img src="/logo.svg" alt="Techsavvys logo" className=" h-12 md:hidden" />
         </Link>
         <ul className="hidden md:flex gap-8 items-center">
           <li>
-            <Link href="https://techsavvy.academy/" className="font-bold text-sm md:text-lg hover:underline">
+            <Link href="https://techsavvy.academy/" className="text-sm md:text-md hover:underline">
               Academy
             </Link>
           </li>
           <li>
-            <Link href="https://techsavvy.agency/" className="font-bold text-sm md:text-lg hover:underline">
+            <Link href="https://techsavvy.agency/" className=" text-sm md:text-md hover:underline">
               Agency
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-bold text-sm md:text-lg hover:underline">
+            <Link href="/" className="font-bold text-sm md:text-md hover:underline">
               Community+
             </Link>
           </li>
@@ -61,19 +63,19 @@ export default function Header() {
       </nav>
 
       {/* Primær navigation */}
-      <nav className="sticky hidden md:flex justify-between bg-Navyblue text-White px-4 py-4 border-y border-White">
+      <nav className="font-openSans sticky top-0 z-50 hidden md:flex justify-between bg-Navyblue text-White p-2 border-y border-White">
       <Link href="/">
-          <img src="/logo.svg" alt="Techsavvys logo" className="h-20" />
+          <img src="/logo.svg" alt="Techsavvys logo" className="h-16" />
         </Link>
         <ul className="flex gap-8 items-center">
           
           <li>
-            <Link href="/" className="font-bold text-sm md:text-lg hover:underline">
+            <Link href="/" className="text-sm md:text-lg hover:underline">
               Nyheder
             </Link>
           </li>
           <li className="relative group">
-            <button className="font-bold text-sm md:text-lg hover:underline flex items-center">
+            <button className="text-sm md:text-lg hover:underline flex items-center">
               Lokalt
               <img
                 src="/dropdownicon.svg"
@@ -97,7 +99,7 @@ export default function Header() {
             </ul>
           </li>
           <li className="relative group">
-            <button className="font-bold text-sm md:text-lg hover:underline flex items-center">
+            <button className="text-sm md:text-lg hover:underline flex items-center">
               Månedens Tema
               <img
                 src="/dropdownicon.svg"
@@ -121,7 +123,7 @@ export default function Header() {
             </ul>
           </li>
           <li className="relative group">
-            <button className="font-bold text-sm md:text-lg hover:underline flex items-center">
+            <button className="text-sm md:text-lg hover:underline flex items-center">
               Magasiner
               <img
                 src="/dropdownicon.svg"
@@ -143,95 +145,113 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      </header>
 
-      {/* Mobilmenu */}
-      {menuOpen && (
-        <div className="bg-Red text-White fixed inset-x-0 top-0 z-50 border border-White max-h-screen overflow-auto">
-          <button
-            className="text-White absolute top-2 right-2"
-            onClick={() => setMenuOpen(false)}
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path strokeLinecap="square" strokeLinejoin="square" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-          <ul className="mt-12">
-            <li>
-              <Link href="/" className="py-4 pl-2 block font-bold text-lg border-y border-White hover:bg-Hoverbtn">
-                Nyheder
-              </Link>
-            </li>
-            <li>
-              <button
-                className="py-4 pl-2 block font-bold text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
-                onClick={() => toggleDropdown('lokalt')}
-              >
-                Lokalt
-              </button>
-              {dropdownOpen.lokalt && (
-                <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-                  <li className=''><Link href="/Lokalt">Aalborg</Link></li>
-                  <li className=''><Link href="/Lokalt">Aarhus</Link></li>
-                  <li className=''><Link href="/Lokalt">København</Link></li>
-                  <li className=''><Link href="/Lokalt">Odense</Link></li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <button
-                className="py-4 pl-2 block font-bold text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
-                onClick={() => toggleDropdown('tema')}
-              >
-                Månedens Tema
-              </button>
-              {dropdownOpen.tema && (
-                <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-                  <li><Link href="/">Krypto & Blockchain</Link></li>
-                  <li><Link href="/">Tech for the planet</Link></li>
-                  <li><Link href="/">Inkluderende innovation</Link></li>
-                  <li><Link href="/">Fremtidens arbejdsliv</Link></li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <button
-                className="py-4 pl-2 block font-bold text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
-                onClick={() => toggleDropdown('magasiner')}
-              >
-                Magasiner
-              </button>
-              {dropdownOpen.magasiner && (
-                <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-                  <li className=''><Link href="/">From University to Unicorn</Link></li>
-                  <li><Link href="/">The Startup Bible</Link></li>
-                  <li><Link href="/">The Guide</Link></li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <Link href="https://techsavvy.academy/" className="py-4 pl-2 block font-bold text-lg border-b border-White hover:bg-Hoverbtn">
-                Academy
-              </Link>
-            </li>
-            <li>
-              <Link href="https://techsavvy.agency/" className="py-4 pl-2 block font-bold text-lg border-b border-White hover:bg-Hoverbtn">
-                Agency
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="py-4 pl-2 block font-bold text-lg border-b border-White hover:bg-Hoverbtn">
-                Community+
-              </Link>
-            </li>
+     {/* Mobilmenu */}
+{menuOpen && (
+  <div className="bg-Red text-White fixed inset-x-0 top-0 z-50 border border-White max-h-screen overflow-auto">
+    <button
+      className="text-White absolute top-2 right-2"
+      onClick={() => setMenuOpen(false)}
+    >
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="square" strokeLinejoin="square" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <ul className="mt-12">
+      <li>
+        <Link 
+          href="/" 
+          className="py-4 pl-2 block text-lg border-y border-White hover:bg-Hoverbtn"
+          onClick={() => setMenuOpen(false)} // Lukker menuen
+        >
+          Nyheder
+        </Link>
+      </li>
+      <li>
+        <button
+          className="py-4 pl-2 block text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
+          onClick={() => toggleDropdown('lokalt')}
+        >
+          Lokalt
+        </button>
+        {dropdownOpen.lokalt && (
+          <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
+            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
+            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
+            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>København</Link></li>
+            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Odense</Link></li>
           </ul>
-        </div>
-      )}
+        )}
+      </li>
+      <li>
+        <button
+          className="py-4 pl-2 block text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
+          onClick={() => toggleDropdown('tema')}
+        >
+          Månedens Tema
+        </button>
+        {dropdownOpen.tema && (
+          <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>Krypto & Blockchain</Link></li>
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>Tech for the planet</Link></li>
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>Inkluderende innovation</Link></li>
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>Fremtidens arbejdsliv</Link></li>
+          </ul>
+        )}
+      </li>
+      <li>
+        <button
+          className="py-4 pl-2 block text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
+          onClick={() => toggleDropdown('magasiner')}
+        >
+          Magasiner
+        </button>
+        {dropdownOpen.magasiner && (
+          <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>From University to Unicorn</Link></li>
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>The Startup Bible</Link></li>
+            <li><Link href="/" onClick={() => setMenuOpen(false)}>The Guide</Link></li>
+          </ul>
+        )}
+      </li>
+      <li>
+        <Link 
+          href="https://techsavvy.academy/" 
+          className="py-4 pl-2 block text-lg border-b border-White hover:bg-Hoverbtn"
+          onClick={() => setMenuOpen(false)} // Lukker menuen
+        >
+          Academy
+        </Link>
+      </li>
+      <li>
+        <Link 
+          href="https://techsavvy.agency/" 
+          className="py-4 pl-2 block text-lg border-b border-White hover:bg-Hoverbtn"
+          onClick={() => setMenuOpen(false)} // Lukker menuen
+        >
+          Agency
+        </Link>
+      </li>
+      <li>
+        <Link 
+          href="/" 
+          className="py-4 pl-2 block text-lg border-b border-White hover:bg-Hoverbtn"
+          onClick={() => setMenuOpen(false)} // Lukker menuen
+        >
+          Community+
+        </Link>
+      </li>
+    </ul>
+  </div>
+)}
+
     </>
   );
 }
