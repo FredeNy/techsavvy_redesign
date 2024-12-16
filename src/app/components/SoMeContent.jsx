@@ -50,7 +50,7 @@ export default function SoMeContent() {
     </div>
     <div className="">
       <Image 
-        src="/SoMe4.webP" 
+        src="/SoMe4.webp" 
         alt="Link til SoMe video" 
         width={250} 
         height={400}
