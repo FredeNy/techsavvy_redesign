@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -25,7 +26,15 @@ export default function Header() {
 
         {/* Sekundær navigation */}
         <Link href="/">
-          <img src="/logo.svg" alt="Techsavvys logo" className=" h-12 md:hidden" />
+
+          <Image
+      src="/logo.svg"
+      alt="Techsavvys logo"
+      width={250}
+      height={250}
+      className=" h-12 md:hidden" 
+      
+    />
         </Link>
         <ul className="hidden md:flex gap-8 items-center mx-4">
           <li>
@@ -65,7 +74,15 @@ export default function Header() {
       {/* Primær navigation */}
       <nav className="font-openSans sticky top-0 z-50 hidden md:flex justify-between bg-Navyblue text-White p-2 border-y border-White">
       <Link href="/">
-          <img src="/logo.svg" alt="Techsavvys logo" className="mx-4 h-16" />
+
+          <Image
+      src="/logo.svg"
+      alt="Techsavvys logo"
+      width={250}
+      height={250}
+      className=" mx-4 h-16" 
+      
+    />
         </Link>
         <ul className="flex gap-8 items-center mx-4">
           
@@ -77,11 +94,14 @@ export default function Header() {
           <li className="relative group">
             <button className="text-sm md:text-lg hover:underline flex items-center">
               Lokalt
-              <img
-                src="/dropdownicon.svg"
-                alt="Dropdown icon"
-                className="w-4 h-4 ml-2"
-              />
+              <Image
+      src="/dropdownicon.svg"
+      alt="Dropdown icon"
+      width={250}
+      height={250}
+      className="w-4 h-4 ml-2" 
+      
+    />
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
               <li className="p-2 hover:bg-gray-200 border border-White">
@@ -101,11 +121,14 @@ export default function Header() {
           <li className="relative group">
             <button className="text-sm md:text-lg hover:underline flex items-center">
               Månedens Tema
-              <img
-                src="/dropdownicon.svg"
-                alt="Dropdown icon"
-                className="w-4 h-4 ml-2"
-              />
+              <Image
+      src="/dropdownicon.svg"
+      alt="Dropdown icon"
+      width={250}
+      height={250}
+      className="w-4 h-4 ml-2" 
+      
+    />
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
               <li className="p-2 hover:bg-gray-200 border border-White">
@@ -125,11 +148,14 @@ export default function Header() {
           <li className="relative group">
             <button className="text-sm md:text-lg hover:underline flex items-center">
               Magasiner
-              <img
-                src="/dropdownicon.svg"
-                alt="Dropdown icon"
-                className="w-4 h-4 ml-2"
-              />
+              <Image
+      src="/dropdownicon.svg"
+      alt="Dropdown icon"
+      width={250}
+      height={250}
+      className="w-4 h-4 ml-2" 
+      
+    />
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2 shadow-lg">
               <li className="p-2 hover:bg-gray-200 border border-White">
