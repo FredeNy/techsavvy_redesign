@@ -91,7 +91,7 @@ export default function LatestNewsArticles() {
                   className="w-full"
                 />
   
-                <h2 className="bg-Red font-inter text-White absolute -mt-4 px-4 py-1 mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
+                <h2 className="text-sm md:text-base bg-Red font-inter text-White absolute -mt-4 px-4 py-1 mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
                   {article.Category}
                 </h2>
                 </div>
