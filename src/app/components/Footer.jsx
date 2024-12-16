@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
         <div className="order-2 md:order-5">
   <h2 className="text-White font-bold text-xl mb-2 font-openSans">Følg med</h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+  <div className="inline-grid grid-cols-2 md:grid-cols-4 gap-2">
     <Image
       src="/facebook.svg"
       alt="Link til Techsavvys Facebook profil"
