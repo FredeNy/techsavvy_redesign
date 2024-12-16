@@ -58,7 +58,7 @@ console.log(articles);
           <div className="bg-White relative" key={article.id}>
             <Link href={`/${article.slug}`} prefetch={false}>
               <div>
-                <div className="grid grid-cols-[160px_1fr] md:grid-cols-1">
+                <div className="grid grid-cols-[160px_1fr] md:grid-cols-1 mb-2">
                   <Image
                     alt={article.Heading}
                     src={
@@ -71,7 +71,7 @@ console.log(articles);
                     className="w-auto self-stretch object-cover"
                   />
                   <div>
-                  <div className="font-inter flex col sm:-bottom-4 sm:left-4 bg-Red text-White px-4 py-1 md:translate-y-[-50%] w-fit">
+                  <div className="font-inter flex col md:ml-6 sm:left-4 bg-Red text-White px-4 py-1 md:translate-y-[-50%] w-fit">
                     {article.Category}
                   </div>
                 

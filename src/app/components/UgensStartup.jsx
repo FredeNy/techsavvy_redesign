@@ -53,12 +53,12 @@ console.log(articles);
     <section className="bg-Navyblue text-White">
       <h2 className="font-openSans text-xl md:text-2xl font-bold pt-6 pl-6">UGENS STARTUP</h2>
   
-      <div className=" sm:w-full text-Black  md:grid md:grid-cols-3 md:gap-10 md:pt-6 md:px-6 pt-6 md:p-12">
+      <div className=" sm:w-full text-Black md:grid md:grid-cols-3 md:gap-10 md:pt-6 md:px-6 pt-6 md:p-12">
         {articles.map((article) => (
           <div className="bg-White relative" key={article.id}>
             <Link href={`/${article.slug}`} prefetch={false}>
               <div>
-                <div className="relative">
+                <div className="grid grid-cols-[160px_1fr] md:grid-cols-1 mb-2">
                   <Image
                     alt={article.Heading}
                     src={
@@ -68,15 +68,15 @@ console.log(articles);
                     }
                     width={500}
                     height={300}
-                    className="w-auto"
+                    className="w-auto self-stretch object-cover"
                   />
-                  
-                  <div className="font-inter flex col absolute sm:-bottom-4 sm:left-4 bg-Red text-White px-4 py-1">
+                  <div>
+                  <div className="font-inter flex col md:ml-6 sm:left-4 bg-Red text-White px-4 py-1 md:translate-y-[-50%] w-fit">
                     {article.Category}
                   </div>
-                </div>
-                <div className="mx-6 mt-4">
-                  <p className="text-xl font-openSans">
+                
+                <div className="mx-6 my-4 md:mt-0">
+                  <p className="md:text-xl font-openSans">
                     {article.Heading.split(":").map((part, index) => (
                       <span key={index} className={index > 0 ? "block" : ""}>
                         {part}
@@ -84,6 +84,8 @@ console.log(articles);
                       </span>
                     ))}
                   </p>
+                  </div>
+                </div>
                 </div>
               </div>
             </Link>
