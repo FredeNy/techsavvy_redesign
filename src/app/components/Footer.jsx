@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <section className='py-2 bg-Navyblue'>
-      <div className='grid grid-cols-2 md:flex y my-6 sm:justify-around'>
+    <section className='bg-Navyblue'>
+      <div className='ml-8 md:ml-0 grid grid-cols-[200px_1fr] gap-8 md:flex p-4 my-6 sm:justify-around'>
         
       <div className='order-5 md:order-1'>
       <Image 

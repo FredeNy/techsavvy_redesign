@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function SoMeContent() {
 
   return (
-    <section className="bg-White p-8 font-openSans">
+    <section className="bg-White p-6 font-openSans">
     <div className="flex pb-8">
-    <h2 className="md:text-2xl font-bold">FØLG MED</h2>
+    <h2 className="text-2xl font-bold">FØLG MED</h2>
     <Image 
         src="/playicon.svg" 
         alt="play icon i følg med sektionen"
@@ -26,7 +26,7 @@ export default function SoMeContent() {
         className=""
         priority 
       />
-<h3 className="w-2/3">Finalisterne til Nordic PropTech Awards 2025 offentliggjort</h3>
+<h3 className="md:w-3/4">Finalisterne til Nordic PropTech Awards 2025 offentliggjort</h3>
     </div>
     <div className="">
       <Image 
@@ -36,7 +36,7 @@ export default function SoMeContent() {
         height={400}
         priority 
       />
-<h3 className="w-2/3">For få dage siden skrev de under med EIFO. Nu er Ugens Startup klar til at rydde miner i krigen Ukraine</h3>
+<h3 className="md:w-3/4">For få dage siden skrev de under med EIFO. Nu er Ugens Startup klar</h3>
     </div>
     <div className="">
       <Image 
@@ -46,7 +46,7 @@ export default function SoMeContent() {
         height={400}
         priority 
       />
-<h3 className="w-2/3">Et brag af en åbningsfest med bajere og band</h3>
+<h3 className="md:w-3/4">Et brag af en åbningsfest med bajere og band</h3>
     </div>
     <div className="">
       <Image 
@@ -56,7 +56,7 @@ export default function SoMeContent() {
         height={400}
         priority 
       />
-<h3 className="w-2/3">Fynsk robotgigant åbner første udenlandske produktionsanlæg</h3>
+<h3 className="md:w-3/4">Fynsk robotgigant åbner første udenlandske produktionsanlæg</h3>
     </div>
     </div>
   </section>

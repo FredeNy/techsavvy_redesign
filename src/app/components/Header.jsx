@@ -32,7 +32,7 @@ export default function Header() {
       alt="Techsavvys logo"
       width={250}
       height={250}
-      className=" h-12 md:hidden" 
+      className="h-12 md:hidden" 
       
     />
         </Link>
@@ -80,7 +80,7 @@ export default function Header() {
       alt="Techsavvys logo"
       width={250}
       height={250}
-      className=" mx-4 h-16" 
+      className="h-16" 
       
     />
         </Link>
@@ -105,16 +105,16 @@ export default function Header() {
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/Lokalt">Aalborg</Link>
+                <Link href="">Aalborg</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/Lokalt">Aarhus</Link>
+                <Link href="">Aarhus</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
                 <Link href="/Lokalt">København</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/Lokalt">Odense</Link>
+                <Link href="">Odense</Link>
               </li>
             </ul>
           </li>
@@ -132,16 +132,16 @@ export default function Header() {
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">Krypto & Blockchain</Link>
+                <Link href="">Krypto & Blockchain</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">Tech for the planet</Link>
+                <Link href="">Tech for the planet</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">Inkluderende innovation</Link>
+                <Link href="">Inkluderende innovation</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">Fremtidens arbejdsliv</Link>
+                <Link href="">Fremtidens arbejdsliv</Link>
               </li>
             </ul>
           </li>
@@ -159,13 +159,13 @@ export default function Header() {
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2 shadow-lg">
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">From University to Unicorn</Link>
+                <Link href="">From University to Unicorn</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">The Startup Bible</Link>
+                <Link href="">The Startup Bible</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="/">The Guide</Link>
+                <Link href="">The Guide</Link>
               </li>
             </ul>
           </li>
@@ -209,10 +209,10 @@ export default function Header() {
         </button>
         {dropdownOpen.lokalt && (
           <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
-            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
             <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>København</Link></li>
-            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Odense</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Odense</Link></li>
           </ul>
         )}
       </li>
@@ -225,10 +225,10 @@ export default function Header() {
         </button>
         {dropdownOpen.tema && (
           <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>Krypto & Blockchain</Link></li>
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>Tech for the planet</Link></li>
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>Inkluderende innovation</Link></li>
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>Fremtidens arbejdsliv</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Krypto & Blockchain</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Tech for the planet</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Inkluderende innovation</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>Fremtidens arbejdsliv</Link></li>
           </ul>
         )}
       </li>
@@ -241,9 +241,9 @@ export default function Header() {
         </button>
         {dropdownOpen.magasiner && (
           <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>From University to Unicorn</Link></li>
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>The Startup Bible</Link></li>
-            <li><Link href="/" onClick={() => setMenuOpen(false)}>The Guide</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>From University to Unicorn</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>The Startup Bible</Link></li>
+            <li><Link href="" onClick={() => setMenuOpen(false)}>The Guide</Link></li>
           </ul>
         )}
       </li>

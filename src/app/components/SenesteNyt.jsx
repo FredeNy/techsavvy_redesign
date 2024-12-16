@@ -92,7 +92,7 @@ export default function LatestNewsArticles() {
                   {article.Category}
                 </h2>
                 </div>
-                <div className="mx-6 pt-10">
+                <div className="mx-6 pt-6">
                   <p className="md:text-2xl font-openSans">
 
                     {article.Heading.split(":").map((part, index) => (
@@ -102,7 +102,7 @@ export default function LatestNewsArticles() {
                       </span>
                     ))}
                   </p>
-                  <p className="text-md font-normal hidden sm:block">
+                  <p className="text-md hidden sm:block">
                     {article.Subheading}
                   </p>
                 </div>
@@ -112,13 +112,13 @@ export default function LatestNewsArticles() {
         </div>
   
         {/* Indikatorer */}
-        <div className="bg-White flex space-x-2 my-2 justify-center">
+        <div className="flex space-x-2 my-2 justify-center">
           {articles.map((_, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-full ${
-                index === activeIndex ? "bg-Black" : "bg-Grey"
+              className={`w-3 h-3 rounded-full border border-Navyblue ${
+                index === activeIndex ? "bg-Navyblue" : "bg-White"
               }`}
               aria-label={`Gå til artikel ${index + 1}`}
             />

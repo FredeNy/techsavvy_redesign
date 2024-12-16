@@ -95,7 +95,7 @@ export default function LatestNewsArticles() {
                   {article.Category}
                 </h2>
                 </div>
-                <div className="mx-6 pt-10">
+                <div className="mx-6 pt-6">
                   <p className="md:text-2xl font-openSans">
 
                     {article.Heading.split(":").map((part, index) => (
@@ -120,8 +120,8 @@ export default function LatestNewsArticles() {
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-full ${
-                index === activeIndex ? "bg-Black" : "bg-Grey"
+              className={`w-3 h-3 rounded-full border border-Navyblue ${
+                index === activeIndex ? "bg-Navyblue" : "bg-White"
               }`}
               aria-label={`Gå til artikel ${index + 1}`}
             />
