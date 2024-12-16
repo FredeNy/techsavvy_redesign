@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <>
     <header className='sticky top-0 z-50'>
-    <nav className=" font-openSans font-extrabold bg-Darkblue text-White p-2 flex justify-between items-center">
+    <nav className="font-openSans font-extrabold bg-Darkblue text-White p-4 flex justify-between items-center">
 
         {/* Sekundær navigation */}
         <Link href="/">
@@ -32,7 +32,7 @@ export default function Header() {
       alt="Techsavvys logo"
       width={250}
       height={250}
-      className="h-12 md:hidden" 
+      className="md:hidden" 
       
     />
         </Link>
@@ -66,7 +66,7 @@ export default function Header() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="straight" strokeLinejoin="straight" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <path strokeLinecap="square" strokeLinejoin="square" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
       </nav>
@@ -175,7 +175,7 @@ export default function Header() {
 
      {/* Mobilmenu */}
 {menuOpen && (
-  <div className="bg-Red text-White fixed inset-x-0 top-0 z-50 border border-White max-h-screen overflow-auto">
+  <div className="font-openSans bg-Red text-White fixed inset-x-0 top-0 z-50 border border-White max-h-screen overflow-auto">
     <button
       className="text-White absolute top-2 right-2"
       onClick={() => setMenuOpen(false)}
@@ -201,49 +201,71 @@ export default function Header() {
         </Link>
       </li>
       <li>
-        <button
-          className="py-4 pl-2 block text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
-          onClick={() => toggleDropdown('lokalt')}
-        >
-          Lokalt
-        </button>
+      <button
+  className="flex items-center py-4 pl-2 text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
+  onClick={() => toggleDropdown('lokalt')}
+>
+  Lokalt
+  <Image
+    src="/dropdownicon.svg"
+    alt="Dropdown icon"
+    width={250}
+    height={250}
+    className="w-4 h-4 ml-2" 
+  />
+</button>
+
         {dropdownOpen.lokalt && (
-          <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
-            <li><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>København</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Odense</Link></li>
+          <ul className="font-inter border-b border-White bg-Hoverbtn">
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>København</Link></li>
+            <li className='py-4 pl-4 order-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Odense</Link></li>
           </ul>
         )}
       </li>
       <li>
         <button
-          className="py-4 pl-2 block text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
+          className="flex items-center py-4 pl-2 text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
           onClick={() => toggleDropdown('tema')}
         >
           Månedens Tema
+          <Image
+    src="/dropdownicon.svg"
+    alt="Dropdown icon"
+    width={250}
+    height={250}
+    className="w-4 h-4 ml-2" 
+  />
         </button>
         {dropdownOpen.tema && (
-          <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Krypto & Blockchain</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Tech for the planet</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Inkluderende innovation</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>Fremtidens arbejdsliv</Link></li>
+         <ul className="font-inter border-b border-White bg-Hoverbtn">
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Krypto & Blockchain</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Tech for the planet</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Inkluderende innovation</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Fremtidens arbejdsliv</Link></li>
           </ul>
         )}
       </li>
       <li>
         <button
-          className="py-4 pl-2 block text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
+          className="flex items-center py-4 pl-2 text-lg w-full text-left border-b border-White hover:bg-Hoverbtn"
           onClick={() => toggleDropdown('magasiner')}
         >
           Magasiner
+          <Image
+    src="/dropdownicon.svg"
+    alt="Dropdown icon"
+    width={250}
+    height={250}
+    className="w-4 h-4 ml-2" 
+  />
         </button>
         {dropdownOpen.magasiner && (
-          <ul className="pl-4 space-y-2 py-4 border-b border-White bg-Hoverbtn">
-            <li><Link href="" onClick={() => setMenuOpen(false)}>From University to Unicorn</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>The Startup Bible</Link></li>
-            <li><Link href="" onClick={() => setMenuOpen(false)}>The Guide</Link></li>
+          <ul className="font-inter border-b border-White bg-Hoverbtn">
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>From University to Unicorn</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>The Startup Bible</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>The Guide</Link></li>
           </ul>
         )}
       </li>
