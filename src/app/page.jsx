@@ -17,14 +17,14 @@ export default function Home() {
       <SenesteNytArticle />
        <NewsArticle />
        <Ad 
-            imageSrc="/techsavvy_ad_red.webp" 
+            imageSrc="/techsavvy_ad_white.webp" 
             altText="Annonce" 
           />
        <UgensStartup/>
        <SoMeContent />
        <Debat/>
        <Ad 
-            imageSrc="/techsavvy_ad_white.webp" 
+            imageSrc="/techsavvy_ad_red.webp" 
             altText="Annonce" 
           />
        <div className="md:grid grid-cols-2">
