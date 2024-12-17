@@ -68,7 +68,7 @@ console.log(articles);
                     }
                     width={500}
                     height={300}
-                    className="w-auto self-stretch object-cover min-height 100%"
+                    className="w-auto self-stretch object-cover min-h-[100%]"
                   />
                   <div className="">
                   <div className="text-sm md:text-base font-inter flex col md:ml-6 sm:left-4 bg-Red text-White px-4 py-1 md:translate-y-[-50%] w-fit">
