@@ -1,3 +1,4 @@
+//Følg med komponent
 "use client"
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
@@ -79,7 +80,7 @@ export default function SoMeContent() {
                   className=""
                   priority
                 />
-                <h3 className="mt-2 text-sm md:text-base">{article.title}</h3>
+                <h3 className="font-openSans mt-2 text-sm md:text-base">{article.title}</h3>
               </div>
             </div>
           ))}

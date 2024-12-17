@@ -1,3 +1,4 @@
+//Seneste nyt forside komponent
 "use client";
 
 import { useState, useEffect } from "react";

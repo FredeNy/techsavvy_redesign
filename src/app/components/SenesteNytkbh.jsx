@@ -1,3 +1,4 @@
+//Seneste nyt København komponent
 "use client";
 
 import { useState, useEffect } from "react";

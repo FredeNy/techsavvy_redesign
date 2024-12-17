@@ -1,10 +1,11 @@
+//Footer komponent
 import React from 'react';
 import Image from 'next/image';
 
 export default function Footer() {
   return (
     <section className='bg-Navyblue'>
-      <div className='ml-8 md:ml-0 grid grid-cols-[200px_1fr] gap-8 md:flex p-4 my-6 sm:justify-around'>
+      <div className='ml-8 md:ml-0 grid grid-cols-[200px_1fr] gap-4 md:flex py-4 md:p-4 my-6 sm:justify-around'>
         
       <div className='order-5 md:order-1'>
       <Image 
@@ -12,7 +13,7 @@ export default function Footer() {
       alt="TechSavvy logo" 
       width={250}
       height={115}
-      className=''
+      className='w-80 md:block'
     />
         </div>
 

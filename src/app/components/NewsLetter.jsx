@@ -1,3 +1,4 @@
+//Nyhedsbrev komponent
 "use client";
 
 import { useState } from 'react';

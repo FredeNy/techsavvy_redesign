@@ -1,3 +1,4 @@
+//Lokale nyheder for København med filtering
 "use client";
 
 import { useState, useEffect } from "react";
@@ -129,7 +130,7 @@ export default function NewsArticles() {
                     {article.Category}
                   </div>
                   {/* Overskrift */}
-                  <div className="mx-6 my-4 md:mt-0">
+                  <div className="mx-2 md:mx-6 my-2 md:mt-0">
                     <h3 className="md:text-xl font-openSans">
                       {article.Heading.split(":").map((part, index) => (
                         <span key={index} className={index > 0 ? "block" : ""}>
