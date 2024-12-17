@@ -121,7 +121,7 @@ export default function NewsArticles() {
                   }
                   width={500}
                   height={300}
-                  className="w-auto self-stretch object-cover"
+                  className="w-auto self-stretch object-cover min-h-[100%]"
                 />
                 <div>
                   {/* Kategori */}
