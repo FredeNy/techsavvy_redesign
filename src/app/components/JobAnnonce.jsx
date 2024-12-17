@@ -4,9 +4,9 @@ export default function JobAnnonce() {
 
   return (
     <section className="bg-White text-Black">
-  <h1 className="font-openSans md:text-2xl font-bold py-8 px-6">JOBANNONCER</h1>
+  <h1 className="font-openSans md:text-2xl font-bold py-6 pl-4 md:pl-6 text-xl">JOBANNONCER</h1>
 
-  <div className="text-Black border-t border-b border-EggWhite p-4">
+  <div className="text-Black border-t border-b border-EggWhite p-4 ">
   
   <div className="flex items-center space-x-4">
     <Image 

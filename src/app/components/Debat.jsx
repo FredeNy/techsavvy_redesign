@@ -51,7 +51,7 @@ console.log(articles);
 
   return (
     <section className="bg-Navyblue text-White">
-      <h2 className="font-openSans text-xl md:text-2xl font-bold pt-6 pl-6">DEBAT</h2>
+      <h2 className="font-openSans text-xl md:text-2xl font-bold pt-6 pl-4 md:pl-6">DEBAT</h2>
   
       <div className="sm:w-full text-Black md:grid md:grid-cols-3 md:gap-10 md:pt-6 md:px-6 pt-6 md:p-12">
         {articles.map((article) => (
@@ -76,14 +76,14 @@ console.log(articles);
                   </div>
                 
                 <div className="mx-6 my-4 md:mt-0">
-                  <p className="md:text-xl font-openSans">
+                  <h3 className="md:text-xl font-openSans">
                     {article.Heading.split(":").map((part, index) => (
                       <span key={index} className={index > 0 ? "block" : ""}>
                         {part}
                         {index === 0 && ":"}
                       </span>
                     ))}
-                  </p>
+                  </h3>
                   </div>
                 </div>
                 </div>

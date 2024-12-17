@@ -91,12 +91,12 @@ export default function LatestNewsArticles() {
                   className="w-full"
                 />
   
-                <h2 className="text-sm md:text-base bg-Red font-inter text-White absolute -mt-4 px-4 py-1 mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
+                <div className="text-sm md:text-base bg-Red font-inter text-White absolute -mt-4 px-4 py-1 mx-4 md:mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
                   {article.Category}
-                </h2>
                 </div>
-                <div className="mx-6 pt-6">
-                  <p className="md:text-2xl font-openSans">
+                </div>
+                <div className="mx-4 md:mx-6 pt-6">
+                  <h2 className="md:text-2xl font-openSans">
 
                     {article.Heading.split(":").map((part, index) => (
                       <span key={index} className={index > 0 ? "block" : ""}>
@@ -104,7 +104,7 @@ export default function LatestNewsArticles() {
                         {index === 0 && ":"}
                       </span>
                     ))}
-                  </p>
+                  </h2>
                   <p className="text-md font-normal hidden sm:block">
                     {article.Subheading}
                   </p>

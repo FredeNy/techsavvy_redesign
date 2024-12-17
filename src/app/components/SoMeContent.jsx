@@ -40,14 +40,14 @@ export default function SoMeContent() {
   };
 
   return (
-    <section className="bg-White font-openSans pb-6">
-      <div className="flex pb-8 pl-6 pt-6">
-        <h2 className="text-2xl font-bold">FØLG MED</h2>
+    <section className="bg-White pb-6">
+      <div className="flex pb-6 md:pl-6 pt-6 pl-4">
+        <h2 className="font-openSans text-xl md:text-2xl font-bold">FØLG MED</h2>
         <Image
           src="/playicon.svg"
           alt="play icon i følg med sektionen"
-          width={20}
-          height={20}
+          width={22}
+          height={22}
           priority
           className="ml-2"
         />

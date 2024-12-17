@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Image from "next/image";
 import ArticleCard from "@/app/components/ArticleCard"
@@ -55,11 +56,11 @@ export default async function Page({ params }) {
         <div className="text-Black ">
           <div className="bg-White" key={article.id}>
             <div className='p-6'>
-          <p className="font-openSans text-xl md:text-2xl">{article.Heading.split(":").map((part, index) => (
+          <h1 className="font-openSans text-xl md:text-2xl">{article.Heading.split(":").map((part, index) => (
     <span key={index} className={index > 0 ? "block" : ""}>
       {part}{index === 0 && ":"}
     </span>
-  ))}</p>
+  ))}</h1>
           <p className="text-sm md:text-md md:w-2/3">{article.Subheading}</p>
           </div>
           
@@ -75,13 +76,13 @@ export default async function Page({ params }) {
               className="w-full"
             />
             <div className="mx-6">
-              <h2 className="bg-Red font-inter text-White absolute -mt-4 px-2 py-1 whitespace-nowrap overflow-hidden text-ellipsis">
+              <div className="text-sm md:text-base bg-Red font-inter text-White absolute -mt-4 px-2 py-1 whitespace-nowrap overflow-hidden text-ellipsis">
                 {article.Category}
-              </h2>
+              </div>
              
               <p className="text-sm py-6">{article.Imagetext}</p>
               <div className='border-t border-b border-EggWhite py-6'>
-              <p className="text-md">Af <span className='font-extrabold'>{article.Author}</span><span className='ml-6'> {article.Date} </span></p>
+              <p className="text-md">Af <span className='font-bold'>{article.Author}</span><span className='ml-6'> {article.Date} </span></p>
               </div>
               <p className="text-lg font-normal py-10">
   {article.Bodytext.split('\n').map((paragraph, index) => (

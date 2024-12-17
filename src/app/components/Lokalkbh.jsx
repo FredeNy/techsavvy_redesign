@@ -77,8 +77,8 @@ export default function NewsArticles() {
   return (
     <section className="bg-Navyblue text-White pb-12 relative">
       {/* Overskrift og filter-knap */}
-      <div className="md:flex justify-between px-6 md:pt-6 relative">
-        <h1 className="font-openSans text-xl md:text-2xl py-4">NYHEDER - KØBENHAVN</h1>
+      <div className="md:flex justify-between px-4 md:px-6 md:pt-6 relative">
+        <h2 className="font-openSans text-xl md:text-2xl py-4">NYHEDER - KØBENHAVN</h2>
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -130,14 +130,14 @@ export default function NewsArticles() {
                   </div>
                   {/* Overskrift */}
                   <div className="mx-6 my-4 md:mt-0">
-                    <p className="md:text-xl font-openSans">
+                    <h3 className="md:text-xl font-openSans">
                       {article.Heading.split(":").map((part, index) => (
                         <span key={index} className={index > 0 ? "block" : ""}>
                           {part}
                           {index === 0 && ":"}
                         </span>
                       ))}
-                    </p>
+                    </h3>
                   </div>
                 </div>
               </div>

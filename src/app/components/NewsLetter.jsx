@@ -68,7 +68,7 @@ export default function NewsLetterForm() {
           className="mx-auto mb-4"
         />
 
-        <h2 className="font-openSans text-White mb-2 font-bold text-2xl md:text-2xl">
+        <h2 className="font-openSans text-White mb-2 font-bold text-xl md:text-2xl md:whitespace-nowrap">
           TILMELD DIG VORES NYHEDSBREV
         </h2>
 
@@ -81,7 +81,7 @@ export default function NewsLetterForm() {
           onSubmit={handleSubmit}
           className="py-2 w-full"
         >
-          <div className="text-center mb-2 text-sm">
+          <div className="text-center mb-2 text-sm text-White">
             {state.message}
           </div>
           

@@ -105,16 +105,16 @@ export default function Header() {
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="">Aalborg</Link>
+                <Link href="/Lokalt">Aalborg</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="">Aarhus</Link>
+                <Link href="/Lokalt">Aarhus</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
                 <Link href="/Lokalt">København</Link>
               </li>
               <li className="p-2 hover:bg-gray-200 border border-White">
-                <Link href="">Odense</Link>
+                <Link href="/Lokalt">Odense</Link>
               </li>
             </ul>
           </li>
@@ -217,10 +217,10 @@ export default function Header() {
 
         {dropdownOpen.lokalt && (
           <ul className="font-inter border-b border-White bg-Hoverbtn">
-            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
-            <li className='py-4 pl-4 border-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Aalborg</Link></li>
+            <li className='py-4 pl-4 border-b border-White'><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Aarhus</Link></li>
             <li className='py-4 pl-4 border-b border-White'><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>København</Link></li>
-            <li className='py-4 pl-4 order-b border-White'><Link href="" onClick={() => setMenuOpen(false)}>Odense</Link></li>
+            <li className='py-4 pl-4 order-b border-White'><Link href="/Lokalt" onClick={() => setMenuOpen(false)}>Odense</Link></li>
           </ul>
         )}
       </li>
