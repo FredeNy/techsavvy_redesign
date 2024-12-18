@@ -83,7 +83,7 @@ export default function NewsArticles() {
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="font-openSans p-2 px-10 bg-Red text-White text-xl font-bold border border-White"
+            className="font-openSans p-2 px-10 bg-Red hover:bg-Hoverbtn text-White text-xl font-bold border border-White"
           >
             Filter
           </button>
@@ -155,7 +155,7 @@ export default function NewsArticles() {
           className={`font-openSans p-2 md:p-4 px-10 md:text-xl font-bold border ${
             allArticlesLoaded
               ? "bg-Grey text-gray-700 border-gray-500"
-              : "bg-Red text-White border-White"
+              : "bg-Red text-White border-White hover:bg-Hoverbtn"
           }`}
         >
           {allArticlesLoaded ? "INGEN FLERE ARTIKLER" : "INDLÆS FLERE"}

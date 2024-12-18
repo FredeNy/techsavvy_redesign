@@ -110,7 +110,7 @@ export default function NewsLetterForm() {
           <button
             aria-disabled={state.pending}
             type="submit"
-            className="border-2 font-openSans w-full mt-4 bg-Red hover:bg-hoverbtn text-White p-3 text-xl transition-all duration-200"
+            className="border-2 font-openSans w-full mt-4 bg-Red hover:bg-Hoverbtn text-White p-3 text-xl transition-all duration-200"
           >
             TILMELD
           </button>

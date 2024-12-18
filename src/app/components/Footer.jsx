@@ -19,23 +19,23 @@ export default function Footer() {
 
         <div className='order-1 md:order-2'>
           <h2 className='text-White font-bold text-xl mb-2 font-openSans'>Kontakt</h2>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>Nannasgade 28</p>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>2200, København N</p>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>editorial@techsavvy.media</p>
+          <p className='text-sm md:text-md text-Grey'>Nannasgade 28</p>
+          <p className='text-sm md:text-md text-Grey'>2200, København N</p>
+          <p className='text-sm md:text-md text-Grey'>editorial@techsavvy.media</p>
          
         </div>
 
         <div className='order-4 md:order-3'>
           <h2 className='text-White font-bold text-xl mb-2 font-openSans'>Om os</h2>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>Events</p>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>Jobs</p>
+          <p className='text-sm md:text-md text-Grey'>Events</p>
+          <p className='text-sm md:text-md text-Grey'>Jobs</p>
         </div>
 
 
         <div className='order-3 md:order-4'>
           <h2 className='text-White font-bold text-xl mb-2 font-openSans'>Startup</h2>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>Startup ordbog</p>
-          <p className='text-sm md:text-md text-Grey hover:underline active:underline'>Investeringer</p>
+          <p className='text-sm md:text-md text-Grey'>Startup ordbog</p>
+          <p className='text-sm md:text-md text-Grey'>Investeringer</p>
         </div>
         <div className="order-2 md:order-5">
   <h2 className="text-White font-bold text-xl mb-2 font-openSans">Følg med</h2>
@@ -76,9 +76,9 @@ export default function Footer() {
       <div className='mx-auto my-2'>
         
         <div className='text-White flex text-xs md:text-lg md:ml-16'>
-          <p className=' hover:underline active:underline'>Cookie- og Privatslivpolitik</p>
+          <p className=''>Cookie- og Privatslivpolitik</p>
           <span className='mx-2'>|</span>
-          <p className=' font-bold hover:underline active:underline'>Partnerskaber og annoncering</p>      
+          <p className='font-bold'>Partnerskaber og annoncering</p>      
         </div>
 
       </div>
