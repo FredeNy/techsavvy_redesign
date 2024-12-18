@@ -31,7 +31,7 @@ export default function NewsArticles() {
 
         const data = await res.json();
 
-        // Filtrer artikler med Popularity === 100 og vælg de første 3
+        // Filtrer artikler med kategorien debat og vælg de første 3
         const filteredArticles = data.filter((article) => article.Category === "Debat").slice(0, 3);
         setArticles(filteredArticles);
       } catch (err) {
