@@ -113,7 +113,7 @@ export default function LatestNewsArticles() {
         </div>
   
         {/* Indikatorer */}
-        <div className="flex space-x-2 my-2 justify-center">
+        <div className="flex space-x-2 my-6 justify-center">
           {articles.map((_, index) => (
             <button
               key={index}
