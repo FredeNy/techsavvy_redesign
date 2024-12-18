@@ -27,7 +27,7 @@ export default function Home() {
             imageSrc="/techsavvy_ad_red.webp" 
             altText="Annonce" 
           />
-       <div className="md:grid grid-cols-2">
+       <div className="lg:grid grid-cols-2">
        <JobAnnonce/>
        <NewsLetter/>
        </div>
