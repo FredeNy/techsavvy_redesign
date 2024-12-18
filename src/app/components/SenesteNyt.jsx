@@ -1,4 +1,3 @@
-//Seneste nyt forside komponent
 "use client";
 
 import { useState, useEffect } from "react";
@@ -44,7 +43,6 @@ export default function LatestNewsArticles() {
     fetchArticles();
   }, []);
 
-  // Automatiseret skift mellem slides
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) =>
@@ -66,7 +64,7 @@ export default function LatestNewsArticles() {
   return (
     <section className="bg-White text-Black">
       <div className="relative overflow-hidden">
-        {/* Karusel */}
+        {/* Carousel */}
         <div
           className="flex transition-transform duration-500"
           style={{
@@ -76,26 +74,24 @@ export default function LatestNewsArticles() {
           {articles.map((article, index) => (
             <div className="min-w-full" key={article.id}>
               <Link href={`/${article.slug}`} prefetch={false}>
-              <div className="">
-                <Image
-                  alt={article.Heading}
-                  src={
-                    article.ImageEdited.startsWith("http")
-                      ? article.ImageEdited.trim()
-                      : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image.trim()}`
-                  }
-                  width={1000}
-                  height={800}
-                  className="w-full"
-                />
-  
-                <div className="text-sm md:text-base bg-Red font-inter text-White absolute -mt-4 px-4 py-1 mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
-                  {article.Category}
+                <div className="relative aspect-[33/9] w-full">
+                  <Image
+                    alt={article.Heading}
+                    src={
+                      article.ImageEdited.startsWith("http")
+                        ? article.ImageEdited.trim()
+                        : `https://kxhcvsawrtnioroqlqtz.supabase.co/storage/v1/object/public/images/${article.Image.trim()}`
+                    }
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
+                  />
+                  <div className="absolute -bottom-4 md:left-0 text-sm md:text-base bg-Red font-inter text-White px-4 py-1 mx-4 md:mx-6 whitespace-nowrap overflow-hidden text-ellipsis">
+                    {article.Category}
+                  </div>
                 </div>
-                </div>
-                <div className="mx-6 pt-6">
+                <div className="mx-4 md:mx-6 pt-6">
                   <h2 className="md:text-2xl font-openSans">
-
                     {article.Heading.split(":").map((part, index) => (
                       <span key={index} className={index > 0 ? "block" : ""}>
                         {part}
@@ -111,9 +107,9 @@ export default function LatestNewsArticles() {
             </div>
           ))}
         </div>
-  
-        {/* Indikatorer */}
-        <div className="flex space-x-2 my-6 justify-center">
+
+        {/* Indicators */}
+        <div className="flex space-x-2 mt-4 mb-6 justify-center">
           {articles.map((_, index) => (
             <button
               key={index}
@@ -129,3 +125,4 @@ export default function LatestNewsArticles() {
     </section>
   );
 }
+
