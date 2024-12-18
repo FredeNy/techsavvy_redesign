@@ -105,16 +105,16 @@ export default function Header() {
     />
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="/Lokalt">Aalborg</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="/Lokalt">Aarhus</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="/Lokalt">København</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="/Lokalt">Odense</Link>
               </li>
             </ul>
@@ -132,16 +132,16 @@ export default function Header() {
     />
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">Krypto & Blockchain</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">Tech for the planet</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">Inkluderende innovation</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">Fremtidens arbejdsliv</Link>
               </li>
             </ul>
@@ -159,13 +159,13 @@ export default function Header() {
     />
             </button>
             <ul className="absolute hidden group-hover:block bg-Red text-White mt-2">
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">From University to Unicorn</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">The Startup Bible</Link>
               </li>
-              <li className="p-2 border border-White">
+              <li className="p-2 border border-White hover:bg-Hoverbtn">
                 <Link href="">The Guide</Link>
               </li>
             </ul>
