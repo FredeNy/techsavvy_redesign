@@ -55,7 +55,7 @@ export default function NewsArticles() {
   }, []);
 
   const loadMoreArticles = () => {
-    setCurrentIndex((prevIndex) => prevIndex + 9);
+    setCurrentIndex((prevIndex) => prevIndex + 6);
   };
 
   const filteredArticles = articles

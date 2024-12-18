@@ -100,7 +100,7 @@ export default function Header() {
       alt="Dropdown icon"
       width={250}
       height={250}
-      className="w-4 h-4 ml-2" 
+      className="w-3 h-3 ml-2" 
       
     />
             </button>
@@ -127,7 +127,7 @@ export default function Header() {
       alt="Dropdown icon"
       width={250}
       height={250}
-      className="w-4 h-4 ml-2" 
+      className="w-3 h-3 ml-2" 
       
     />
             </button>
@@ -154,7 +154,7 @@ export default function Header() {
       alt="Dropdown icon"
       width={250}
       height={250}
-      className="w-4 h-4 ml-2" 
+      className="w-3 h-3 ml-2" 
       
     />
             </button>
@@ -212,7 +212,7 @@ export default function Header() {
     alt="Dropdown icon"
     width={250}
     height={250}
-    className="w-4 h-4 ml-2" 
+    className="w-3 h-3 ml-2" 
   />
 </button>
 
@@ -236,7 +236,7 @@ export default function Header() {
     alt="Dropdown icon"
     width={250}
     height={250}
-    className="w-4 h-4 ml-2" 
+    className="w-3 h-3 ml-2" 
   />
         </button>
         {dropdownOpen.tema && (
@@ -259,7 +259,7 @@ export default function Header() {
     alt="Dropdown icon"
     width={250}
     height={250}
-    className="w-4 h-4 ml-2" 
+    className="w-3 h-3 ml-2" 
   />
         </button>
         {dropdownOpen.magasiner && (
