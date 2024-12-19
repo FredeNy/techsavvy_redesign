@@ -41,7 +41,7 @@ export default function NewsArticles() {
 
     fetchArticles();
   }, []);
-console.log(articles);
+
   if (error) {
     return <div>Error: {error}</div>;
   }
