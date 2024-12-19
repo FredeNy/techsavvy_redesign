@@ -158,7 +158,7 @@ export default function NewsArticles() {
               : "bg-Red text-White border-White hover:bg-Hoverbtn"
           }`}
         >
-          {allArticlesLoaded ? "INGEN FLERE ARTIKLER" : "INDLÆS FLERE"}
+          {allArticlesLoaded ? "INDLÆS FLERE" : "INDLÆS FLERE"}
         </button>
       </div>
     </section>
